@@ -1,73 +1,177 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+/* Sidebar Styles */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: green;
+    color: white;
+}
+.menu-list{
+    display:flex;
+    flex-direction: column;
 }
 
-nav {
-    background-color: #f4f4f4;
-    padding: 10px 0;
-    text-align: center;
-}
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
+.menu-list a,.logout a{
+    padding: 5% 8%;
+    margin:0.5rem 0;
+    display: flex;
+    justify-content: flex-start;
+    gap:1rem;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color:var(--whiteColor)
 }
+.menu-list a icon-ion,.logout a icon-ion{
+    font-size: 20px;
 
-.container {
-    max-width: 960px;
-    margin: auto;
+}
+.logo {
+    text-align: center;
     padding: 20px;
 }
 
-.menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+
+.menu-list a:hover {
+    background-color: darkgreen;
 }
 
-.menu-item {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+
+.logout:hover {
+    background-color: darkgreen;
+}
+
+/* Main Section Styles */
+.main {
+    margin-left: 250px; /* Adjust this value to avoid collision with sidebar */
+    height: 100vh;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search input {
+    width: 70%;
     padding: 10px;
-    text-align: center;
+    border-radius: 20px;
+    border: none;
+    outline: none;
 }
 
-.menu-item img {
-    max-width: 100%;
-    height: auto;
+.search-btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
 }
 
-.menu-item h2 {
-    margin-top: 0;
+.profile a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    font-size: 24px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
+.profile a:hover {
+    color: darkgreen;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recommendation, .category-menus {
+    width: 45%;
+}
+
+.food-card, .menu-category {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.food-card img, .menu-category img {
     width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
+
+.food-name, .category-name {
+    margin-bottom: 10px;
+}
+
+.food-price {
+    font-weight: bold;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green; 
+    padding: 10px 20px; 
+    color: white; 
+  }
+  
+  .burger-menu {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white; 
+    cursor: pointer;
+  }
+  
+  .search input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 200px; 
+  }
+  
+  .search-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; 
+    color: white; 
+    cursor: pointer;
+  }
+  
+  .profile a {
+    text-decoration: none;
+    color: white; 
+    margin-left: 10px; 
+  }
+  
+  .profile a ion-icon {
+    font-size: 24px;
+  }
+  

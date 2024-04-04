@@ -3,46 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Ordering App</title>
+    <title>Online Food Delivery</title>
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.0.1/css/ionicons.min.css">
 </head>
 <body>
-    <header>
-        <h1>Food Ordering App</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <div class="menu">
-            <div class="menu-item">
-                <img src="food1.jpg" alt="Food 1">
-                <h2>Food Item 1</h2>
-                <p>Description of food item 1.</p>
-                <button>Add to Cart</button>
+    
+    <div class="sidebar">
+        <h1 class="logo">Food Delivery</h1>
+        <div class="menu-list">
+            <a href="#"><ion-icon name="restaurant"></ion-icon> Menu</a>
+            <a href="#"><ion-icon name="cart"></ion-icon> Orders</a>
+            <a href="#"><ion-icon name="wallet"></ion-icon> Wallet</a>
+            <a href="#"><ion-icon name="notifications"></ion-icon> Notifications</a>
+            <a href="#"><ion-icon name="chatbubbles"></ion-icon> Messages</a>
+            <a href="#"><ion-icon name="settings"></ion-icon> Settings</a>
+        </div>
+        <a href="#" class="logout"><ion-icon name="log-out"></ion-icon> Logout</a>
+    </div>
+
+    <!-- Main Section -->
+    <div class="main">
+        <!-- Navbar -->
+        <div class="navbar">
+            <button class="burger-menu">&#9776;</button>
+            <div class="search">
+                <input type="text" placeholder="What you want to eat">
+                <br>
+                <button class="search-btn">Search</button>
             </div>
-            <div class="menu-item">
-                <img src="food2.jpg" alt="Food 2">
-                <h2>Food Item 2</h2>
-                <p>Description of food item 2.</p>
-                <button>Add to Cart</button>
+            <div class="profile">
+                <a href="#"><ion-icon name="cart"></ion-icon></a>
+                <a href="#"><ion-icon name="person"></ion-icon></a>
             </div>
-            <div class="menu-item">
-                <img src="food3.jpg" alt="Food 3">
-                <h2>Food Item 3</h2>
-                <p>Description of food item 3.</p>
-                <button>Add to Cart</button>
+        </div>
+
+        
+        <div class="main-content">
+            
+            <div class="recommendation">
+                <h2 class="main-title">Recommendations</h2>
+                <div class="food-card">
+                    <img src="food1.jpeg" alt="Food 1">
+                    <h3 class="food-name">chicken burger</h3>
+                    <p class="food-description">cheese loaded</p>
+                    <p class="food-price">$10.99</p>
+                </div>
+                <div class="food-card">
+                    <img src="food2.jpeg" alt="pizza">
+                    <h3 class="food-name">pizza</h3>
+                    <p class="food-description">chilli with extra cheese</p>
+                    <p class="food-price">$10.99</p>
+                </div>
+                <div class="food-card">
+                    <img src="food3.jpeg" alt="ice-cream">
+                    <h3 class="food-name">icecream</h3>
+                    <p class="food-description">chocolate with nuts</p>
+                    <p class="food-price">$3.1</p>
+                </div>
+                
+
+                <!-- Add more food cards as needed -->
             </div>
-            <!-- Add more menu items as needed -->
+
+            
+            <div class="category-menus">
+                <h2 class="main-title">Menu Categories</h2>
+                <div class="menu-category">
+                    <img src="category1.jpeg" alt="Category 1">
+                    <h3 class="category-name">Biriyani</h3>
+                </div>
+                <div class="menu-category">
+                    <img src="category2.jpeg" alt="Category 2">
+                    <h3 class="category-name">Tiffins</h3>
+                </div>
+                <div class="menu-category">
+                    <img src="category3.jpeg" alt="Category 2">
+                    <h3 class="category-name">Coffee</h3>
+                </div>
+                <!-- Add more menu categories as needed -->
+            </div>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2024 Food Ordering App</p>
-    </footer>
+
+    
+    <script src="app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    
 </body>
 </html>
